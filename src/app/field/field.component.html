@@ -1,1 +1,43 @@
-<p>field works!</p>
+<div class="field-container">
+  <h2 class="field-container__scores">
+    Ви {{ userPoints.length }} - {{ computerPoints.length }} Комп'ютер
+  </h2>
+
+  <div class="field-container__main">
+    <div
+      class="field"
+      [ngStyle]="{
+        'grid-template-columns': 'repeat(' + fieldLengthArray.length + ', 1fr)',
+        'grid-template-rows': 'repeat(' + fieldLengthArray.length + ', 1fr)'
+      }"
+    >
+      <ng-container *ngFor="let row of fieldLengthArray; let i = index">
+        <div
+          class="field-item"
+          [ngClass]="{
+            'field-item_active': isActive(i, j),
+            'field-item_user': userPoints.includes(getIndex(i, j)),
+            'field-item_computer': computerPoints.includes(getIndex(i, j))
+          }"
+          *ngFor="let column of fieldLengthArray; let j = index"
+          (click)="isActive(i, j) && OnUserClick()"
+        ></div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="field-container__control">
+    <app-input
+      name="Time"
+      label="Введіть час у мілісекундах"
+      [formControl]="formControl"
+    ></app-input>
+    <app-button [disabled]="started" (OnClick)="onStart()">Почати</app-button>
+  </div>
+  <div *ngIf="isDialogOpen" class="field-container__dialog">
+    <app-dialog
+      (OnClose)="onClose()"
+      [isUserWin]="userPoints.length >= winScore"
+      [result]="userPoints.length + ' - ' + computerPoints.length"
+    ></app-dialog>
+  </div>
+</div>

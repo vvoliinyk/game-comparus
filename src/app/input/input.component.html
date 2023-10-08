@@ -1,1 +1,13 @@
-<p>input works!</p>
+<div class="input-wrapper">
+  <span *ngIf="label" class="input-label">{{ label }}</span>
+  <input
+    class="input"
+    type="number"
+    [name]="name"
+    [formControl]="formControl"
+    placeholder="500"
+  />
+  <span class="input-error" *ngIf="formControl.hasError('required')">
+    Обов'язково заповніть це поле!
+  </span>
+</div>

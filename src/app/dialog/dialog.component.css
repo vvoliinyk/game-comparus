@@ -1,0 +1,26 @@
+.dialog {
+  margin-top: 200px;
+  border: 0;
+  border-radius: 20px;
+  padding: 100px;
+  position: relative;
+}
+
+.dialog__message {
+  text-align: center;
+  color: #0036cf;
+  font-size: 32px;
+}
+
+.dialog__close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border: 0;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 24px;
+  transform: rotate(45deg);
+}

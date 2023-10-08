@@ -1,0 +1,10 @@
+<dialog class="dialog" open>
+  <button (click)="close()" class="dialog__close">+</button>
+  <h2 class="dialog__message">
+    {{
+      isUserWin
+        ? "Вітаємо! Ви перемогли з рахунком " + result
+        : "Нажаль Ви програли з рахунком " + result
+    }}
+  </h2>
+</dialog>

@@ -1,0 +1,29 @@
+.button {
+  margin-top: 26px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: #22c55e;
+  cursor: pointer;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+.button:hover {
+  opacity: 0.5;
+}
+
+.button__text {
+  font-size: 30px;
+  color: #fff;
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  .button__text {
+    font-size: 24px;
+  }
+}

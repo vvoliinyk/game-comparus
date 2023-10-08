@@ -26,19 +26,15 @@
         </li>
 
         <li>
-          Гра триває, доки один із учасників не набере 10 очок. Якщо це
-          відбудеться, гра припиняється, і ви побачите повідомлення про
+          Гра триває, доки один із учасників не набере {{ winScore }} очок. Якщо
+          це відбудеться, гра припиняється, і ви побачите повідомлення про
           результати гри у спливаючому вікні.
         </li>
       </ul>
     </div>
-    <div class="scores"></div>
   </div>
   <div class="container__main">
-    <app-field></app-field>
+    <app-field [winScore]="winScore"></app-field>
   </div>
-  <div class="container__control">
-    <app-input></app-input>
-    <app-button>Почати</app-button>
-  </div>
+  <div class="container__footer">Powered by Volodymyr Oliinyk</div>
 </div>

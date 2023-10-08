@@ -1,0 +1,70 @@
+:host {
+  width: 100%;
+}
+
+.field {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  max-height: 65vh;
+  aspect-ratio: 1;
+  margin: auto;
+}
+
+.field-item {
+  background-color: #3b82f6;
+  border-radius: 5px;
+}
+
+.field-item_active {
+  background-color: yellow;
+  cursor: pointer;
+}
+
+.field-item_user {
+  background-color: #22c55e;
+}
+
+.field-item_computer {
+  background-color: #ef4444;
+}
+
+.field-container__control {
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 680px) {
+  .field-container__control {
+    display: block;
+  }
+}
+
+.field-container__scores {
+  text-align: center;
+  color: #0036cf;
+  font-size: 32px;
+}
+
+.field-container__dialog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.field-container {
+  border: 2px solid #001c6c;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+@media (max-width: 480px) {
+  .field-container__scores {
+    font-size: 24px;
+  }
+}
