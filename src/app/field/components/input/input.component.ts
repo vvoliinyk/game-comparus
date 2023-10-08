@@ -7,7 +7,7 @@ import { FormControl } from "@angular/forms";
   styleUrls: ["./input.component.css"],
 })
 export class InputComponent {
-  @Input({ required: true }) formControl!: FormControl;
+  @Input({ required: true }) inputFormControl!: FormControl;
   @Input() label: string = "";
   @Input() name: string = "input";
 }

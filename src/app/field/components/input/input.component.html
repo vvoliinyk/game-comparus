@@ -4,10 +4,11 @@
     class="input"
     type="number"
     [name]="name"
-    [formControl]="formControl"
+    [value]="inputFormControl.value"
+    [formControl]="inputFormControl"
     placeholder="500"
   />
-  <span class="input-error" *ngIf="formControl.hasError('required')">
+  <span class="input-error" *ngIf="inputFormControl.hasError('required')">
     Обов'язково заповніть це поле!
   </span>
 </div>

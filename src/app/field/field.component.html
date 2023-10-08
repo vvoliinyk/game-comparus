@@ -29,7 +29,7 @@
     <app-input
       name="Time"
       label="Введіть час у мілісекундах"
-      [formControl]="formControl"
+      [inputFormControl]="formControl"
     ></app-input>
     <app-button [disabled]="started" (OnClick)="onStart()">Почати</app-button>
   </div>
