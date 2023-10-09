@@ -1,0 +1,8 @@
+<div class="wrapper" *ngIf="dialog.isOpen">
+  <div class="dialog">
+    <button (click)="dialog.close()" class="dialog__close">+</button>
+    <h2 class="dialog__message">
+      {{ dialog.content }}
+    </h2>
+  </div>
+</div>

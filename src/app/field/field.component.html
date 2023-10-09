@@ -32,11 +32,4 @@
     ></app-input>
     <app-button [disabled]="isStarted" (buttonClick)="onStart()">Почати</app-button>
   </div>
-  <div *ngIf="isDialogOpen" class="container__dialog">
-    <app-dialog
-      (OnClose)="onClose()"
-      [isUserWin]="userPoints.length >= winScore"
-      [result]="userPoints.length + ' - ' + computerPoints.length"
-    ></app-dialog>
-  </div>
 </div>
