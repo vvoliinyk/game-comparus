@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
-
-const WIN_SCORE = 10;
+import { WIN_SCORE } from "./constants";
 
 @Component({
   selector: "app-root",

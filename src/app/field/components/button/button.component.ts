@@ -1,15 +1,22 @@
-import { Component, EventEmitter, Input, Output } from "@angular/core";
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+} from "@angular/core";
 
 @Component({
   selector: "app-button",
   templateUrl: "./button.component.html",
   styleUrls: ["./button.component.css"],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ButtonComponent {
   @Input() disabled = false;
-  @Output() OnClick = new EventEmitter();
+  @Output() buttonClick = new EventEmitter();
 
-  click() {
-    this.OnClick.emit();
+  OnClick() {
+    this.buttonClick.emit();
   }
 }

@@ -1,9 +1,8 @@
-<div class="field-container">
-  <h2 class="field-container__scores">
+<div class="container">
+  <h2 class="container__scores">
     Ви {{ userPoints.length }} - {{ computerPoints.length }} Комп'ютер
   </h2>
-
-  <div class="field-container__main">
+  <div class="container__main">
     <div
       class="field"
       [ngStyle]="{
@@ -25,15 +24,15 @@
       </ng-container>
     </div>
   </div>
-  <div class="field-container__control">
+  <div class="container__control">
     <app-input
       name="Time"
       label="Введіть час у мілісекундах"
       [inputFormControl]="formControl"
     ></app-input>
-    <app-button [disabled]="started" (OnClick)="onStart()">Почати</app-button>
+    <app-button [disabled]="isStarted" (buttonClick)="onStart()">Почати</app-button>
   </div>
-  <div *ngIf="isDialogOpen" class="field-container__dialog">
+  <div *ngIf="isDialogOpen" class="container__dialog">
     <app-dialog
       (OnClose)="onClose()"
       [isUserWin]="userPoints.length >= winScore"
