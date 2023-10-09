@@ -1,12 +1,13 @@
 .input-wrapper {
   display: flex;
-  gap: 11px;
+  gap: 10px;
   flex-direction: column;
+  position: relative;
 }
 
 .input-label {
   font-size: 24px;
-  color: #001c6c;
+  color: #fff;
 }
 
 .input {
@@ -23,7 +24,10 @@
 }
 
 .input-error {
-  color: #dc2626;
+  position: absolute;
+  bottom: -10px;
+  transform: translateY(100%);
+  color: #F2B8B5;
   font-weight: bold;
 }
 

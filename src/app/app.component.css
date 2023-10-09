@@ -1,15 +1,9 @@
 .container {
   padding: 50px 100px;
   min-height: 100vh;
-  box-sizing: border-box;
   position: relative;
-  background-image: linear-gradient(
-    0deg,
-    rgb(219 234 254) 0%,
-    white 20%,
-    white 80%,
-    rgb(219 234 254) 100%
-  );
+  background-color: #1d192b;
+  font-family: sans-serif;
 }
 
 .container__main {
@@ -25,14 +19,18 @@
   text-align: right;
 }
 
+.container__footer a {
+  color: #fff;
+}
+
 .title {
-  font-size: 48px;
+  font-size: 57px;
   text-align: center;
-  color: #001c6c;
+  color: #fff;
 }
 
 .rules__title {
-  color: #0036cf;
+  color: #fff;
   font-size: 32px;
 }
 
@@ -40,7 +38,8 @@
   display: flex;
   flex-direction: column;
   row-gap: 10px;
-  font-size: 24px;
+  font-size: 16px;
+  color: #fff;
 }
 
 @media (max-width: 680px) {
