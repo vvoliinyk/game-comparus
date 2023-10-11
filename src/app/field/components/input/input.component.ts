@@ -1,13 +1,15 @@
-import { Component, Input } from "@angular/core";
-import { FormControl } from "@angular/forms";
+import { Component, Input } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
-  selector: "app-input",
-  templateUrl: "./input.component.html",
-  styleUrls: ["./input.component.css"],
+  selector: 'app-input',
+  templateUrl: './input.component.html',
+  styleUrls: ['./input.component.css'],
 })
 export class InputComponent {
   @Input({ required: true }) inputFormControl!: FormControl;
-  @Input() label: string = "";
-  @Input() name: string = "input";
+
+  @Input() label: string = '';
+
+  @Input() name: string = 'input';
 }

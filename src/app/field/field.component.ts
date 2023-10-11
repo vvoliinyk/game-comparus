@@ -1,22 +1,30 @@
-import { Component, Input } from "@angular/core";
-import { FormControl, Validators } from "@angular/forms";
-import { DEFAULT_TIME, DELAY, FIELD_LENGTH } from "../constants";
-import { DialogService } from "../dialog.service";
+import { Component, Input } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
+import { DEFAULT_TIME, DELAY, FIELD_LENGTH } from '../constants';
+import { DialogService } from '../dialog.service';
 
 @Component({
-  selector: "app-field",
-  templateUrl: "./field.component.html",
-  styleUrls: ["./field.component.css"],
+  selector: 'app-field',
+  templateUrl: './field.component.html',
+  styleUrls: ['./field.component.css'],
 })
 export class FieldComponent {
   @Input() winScore!: number;
+
   public formControl = new FormControl(DEFAULT_TIME, [Validators.required]);
+
   public isStarted = false;
+
   public userPoints: number[] = [];
+
   public computerPoints: number[] = [];
+
   public fieldPoints: number[] = [];
+
   public activePointIndex: number | null = null;
+
   public fieldLengthArray: number[];
+
   private timeout?: NodeJS.Timeout;
 
   constructor(private dialog: DialogService) {
@@ -45,9 +53,14 @@ export class FieldComponent {
       this.setRandomPoint();
       this.OnComputerClick();
     } else {
-      this.dialog.open(`${this.userPoints.length >= this.winScore ? 'Вітаємо! Ви перемогли' : 'Нажаль Ви програли'} з рахунком ${this.userPoints.length + ' - ' + this.computerPoints.length}`)
+      this.dialog.open(
+        `${
+          this.userPoints.length >= this.winScore
+            ? 'Вітаємо! Ви перемогли'
+            : 'Нажаль Ви програли'
+        } з рахунком ${`${this.userPoints.length} - ${this.computerPoints.length}`}`,
+      );
       this.reset();
-     
     }
   }
 
@@ -64,7 +77,7 @@ export class FieldComponent {
       this.activePointIndex = null;
 
       this.nextStep();
-    }, this.formControl.value || DEFAULT_TIME)
+    }, this.formControl.value || DEFAULT_TIME);
   }
 
   public OnUserClick() {

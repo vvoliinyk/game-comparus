@@ -1,23 +1,24 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class DialogService {
   public isOpen = false;
-  public content: string = "";
+
+  public content: string = '';
 
   public open(content: string) {
     this.content = content;
     this.isOpen = true;
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   }
 
   public close() {
     this.isOpen = false;
-    this.content = "";
+    this.content = '';
   }
 }

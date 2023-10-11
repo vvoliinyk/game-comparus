@@ -1,14 +1,11 @@
-import { Component } from "@angular/core";
-import { DialogService } from "../dialog.service";
+import { Component } from '@angular/core';
+import { DialogService } from '../dialog.service';
 
 @Component({
-  selector: "app-dialog",
-  templateUrl: "./dialog.component.html",
-  styleUrls: ["./dialog.component.css"],
+  selector: 'app-dialog',
+  templateUrl: './dialog.component.html',
+  styleUrls: ['./dialog.component.css'],
 })
 export class DialogComponent {
-  constructor(public dialog: DialogService) {
-
-  }
-
+  constructor(public dialog: DialogService) {}
 }

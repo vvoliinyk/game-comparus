@@ -30,6 +30,10 @@
       label="Введіть час у мілісекундах"
       [inputFormControl]="formControl"
     ></app-input>
-    <app-button [disabled]="isStarted" (buttonClick)="onStart()">Почати</app-button>
+    <app-button
+      [disabled]="isStarted"
+      (buttonClick)="onStart()"
+      >Почати</app-button
+    >
   </div>
 </div>
