@@ -48,15 +48,3 @@
 .dialog__close:hover {
   opacity: 0.75;
 }
-
-@media (max-width: 768px) {
-  .dialog__message {
-    padding: 0 90px;
-  }
-}
-
-@media (max-width: 580px) {
-  .dialog__message {
-    padding: 0 10px;
-  }
-}
